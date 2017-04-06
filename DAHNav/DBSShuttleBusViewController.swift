@@ -94,8 +94,8 @@ class DBSShuttleBusViewController: UIViewController,UITableViewDelegate, UITable
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if tableView == leftTableView
         {
-            rightTableView.reloadData()
-            NSTimer.scheduledTimerWithTimeInterval(0.02, target: self, selector: #selector(DBSShuttleBusViewController.setOffsetToZero), userInfo: nil, repeats: false)
+            rightTableView.reloadData()//#selector(DBSShuttleBusViewController.setOffsetToZero)
+            NSTimer.scheduledTimerWithTimeInterval(0.02, target: self, selector: Selector("setOffsetToZero"), userInfo: nil, repeats: false)
 
         }
     }
